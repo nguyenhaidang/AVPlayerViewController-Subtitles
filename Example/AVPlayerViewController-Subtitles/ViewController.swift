@@ -38,11 +38,8 @@ class ViewController: UIViewController {
         presentViewController(moviePlayer, animated: true, completion: nil)
         
         // Add subtitles
-        moviePlayer.addSubtitles().open(file: subtitleURL)
-        moviePlayer.addSubtitles().open(file: subtitleURL, encoding: NSUTF8StringEncoding)
-        
-        // Change text properties
-        moviePlayer.subtitleLabel?.textColor = UIColor.redColor()
+        moviePlayer.addSubtitles(NSURL(fileURLWithPath: videoFile!)).open(file: subtitleURL)
+        moviePlayer.addSubtitles(NSURL(fileURLWithPath: videoFile!)).open(file: subtitleURL, encoding: NSUTF8StringEncoding)
         
         // Play
         moviePlayer.player?.play()

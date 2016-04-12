@@ -15,6 +15,7 @@
 		4B4FC9731C2A9DB5002AE636 /* trailer_720p.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4B4FC9711C2A9DB5002AE636 /* trailer_720p.mov */; };
 		4B4FC9741C2A9DB5002AE636 /* trailer_720p.srt in Resources */ = {isa = PBXBuildFile; fileRef = 4B4FC9721C2A9DB5002AE636 /* trailer_720p.srt */; };
 		4B7F8DFC1C2A9F6D00DC949D /* Subtitles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F8DFB1C2A9F6D00DC949D /* Subtitles.swift */; };
+		887915901CBC78D8001DD087 /* THLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8879158F1CBC78D8001DD087 /* THLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		4B4FC9711C2A9DB5002AE636 /* trailer_720p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = trailer_720p.mov; sourceTree = "<group>"; };
 		4B4FC9721C2A9DB5002AE636 /* trailer_720p.srt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = trailer_720p.srt; sourceTree = "<group>"; };
 		4B7F8DFB1C2A9F6D00DC949D /* Subtitles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Subtitles.swift; path = ../../Subtitles.swift; sourceTree = "<group>"; };
+		8879158D1CBC78D7001DD087 /* AVPlayerViewController-Subtitles-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AVPlayerViewController-Subtitles-Bridging-Header.h"; sourceTree = "<group>"; };
+		8879158E1CBC78D8001DD087 /* THLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THLabel.h; sourceTree = "<group>"; };
+		8879158F1CBC78D8001DD087 /* THLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +79,10 @@
 		4B4FC96F1C2A9DAA002AE636 /* AVPlayerViewController-Subtitles */ = {
 			isa = PBXGroup;
 			children = (
+				8879158E1CBC78D8001DD087 /* THLabel.h */,
+				8879158F1CBC78D8001DD087 /* THLabel.m */,
 				4B7F8DFB1C2A9F6D00DC949D /* Subtitles.swift */,
+				8879158D1CBC78D7001DD087 /* AVPlayerViewController-Subtitles-Bridging-Header.h */,
 			);
 			name = "AVPlayerViewController-Subtitles";
 			sourceTree = "<group>";
@@ -115,7 +122,7 @@
 		4B4FC94E1C2A9D60002AE636 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Marc Hervera";
 				TargetAttributes = {
@@ -162,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887915901CBC78D8001DD087 /* THLabel.m in Sources */,
 				4B7F8DFC1C2A9F6D00DC949D /* Subtitles.swift in Sources */,
 				4B4FC96D1C2A9D91002AE636 /* ViewController.swift in Sources */,
 				4B4FC95A1C2A9D60002AE636 /* AppDelegate.swift in Sources */,
@@ -267,10 +275,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "AVPlayerViewController-Subtitles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mhergon.AVPlayerViewController-Subtitles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerViewController-Subtitles/AVPlayerViewController-Subtitles-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -278,10 +289,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "AVPlayerViewController-Subtitles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mhergon.AVPlayerViewController-Subtitles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AVPlayerViewController-Subtitles/AVPlayerViewController-Subtitles-Bridging-Header.h";
 			};
 			name = Release;
 		};
