@@ -117,6 +117,7 @@ public extension AVPlayerViewController {
             subtitleLabel?.layer.rasterizationScale = UIScreen.mainScreen().scale
             contentOverlayView?.addSubview(subtitleLabel!)
             subtitleLabel?.strokeColor = UIColor.grayColor()
+            subtitleLabel?.lineBreakMode = .ByWordWrapping
             subtitleLabel?.strokeSize = 1.0
             // Position
             let constraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|-(20)-[l]-(20)-|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: ["l" : subtitleLabel!])
